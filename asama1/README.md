@@ -10,7 +10,7 @@ Proje .NET 8, ASP.NET Core Web API, Entity Framework Core, SQLite ve sade HTML/C
 
 ## Visual Studio ile çalıştırma
 
-1. `TodoYonetimUygulamasi.sln` dosyasını Visual Studio 2022 ile açın.
+1. `TodoYonetimUygulamasi.sln` dosyasını Visual Studio ile açın.
 2. Çözüme sağ tıklayıp `Configure Startup Projects` bölümünü açın.
 3. `Multiple startup projects` seçeneğini seçin.
 4. `TodoLog.Api` ve `TodoYonetim.Api` projelerini `Start` olarak ayarlayın.
