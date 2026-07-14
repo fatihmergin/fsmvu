@@ -13,6 +13,9 @@ Bu projede;
 - Ayrı bir log mikroservisi (TodoLog.Api) ile yeni görev kayıtları tutuldu.
 - Birim testleri yazıldı.
 
+## Aşama 1 – Görev Yönetim Uygulaması
+![Görev Yönetim Uygulaması](ekranResmi2.png)
+
 ## 📂 Aşama 2 – Sipariş Yönetim Sistemi (Hata Giderme)
 
 Bu projede;
@@ -23,6 +26,9 @@ Bu projede;
 - Mikroservisler arasındaki bildirim akışı düzenlendi.
 - Sistemde bulunan hatalar analiz edilerek giderildi.
 - Tespit edilen hataların nedenleri ve çözümleri **HATA_OZETI.md** dosyasında dokümante edildi.
+
+## Aşama 2 – Sipariş Yönetim Sistemi
+![Sipariş Yönetim Sistemi](ekranResmi1.png)
 
 ## 📦 Proje Dosyaları
 
