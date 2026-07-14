@@ -64,3 +64,9 @@ http://localhost:5080
 Bu istek için ara toplam `1500 TL`, yüzde 10 indirim sonrasındaki toplam ise `1350 TL` olur.
 
 Bulunan hataların belirtileri, kök nedenleri ve kalıcı çözümleri `HATA_OZETI.md` dosyasında açıklanmıştır.
+
+
+## Ekran Görüntüleri
+
+### Ana Sayfa
+![Ana Sayfa](ekranResmi1.png)
