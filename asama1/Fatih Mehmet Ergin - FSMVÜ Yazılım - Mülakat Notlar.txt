@@ -1,0 +1,42 @@
+# Fatih Mehmet Ergin - FSMVÜ Yazılım Geliştirici Aday Değerlendirme Sınavı
+
+**Telefon: +90 538 880 99 83
+**E-posta: fatihmehmetergin@gmail.com
+
+Uygulamayı, 60 dakikalık süre içerisinde kurulumu ve değerlendirilmesi kolay olacak şekilde tek bir **.NET 8 Web API** projesi altında, sade bir **HTML/CSS/JavaScript** arayüzü ile geliştirdim.
+
+Kod yapısında **Controller**, **Service**, **Repository** ve **DbContext** katmanlarını kullanarak sorumlulukları birbirinden ayırdım. Veritabanı olarak ise ek kurulum gerektirmemesi ve kolay kullanılabilmesi nedeniyle **SQLite** tercih ettim.
+
+İş kurallarında, geçmiş tarihli yeni görevlerin eklenmesini engelledim. Ayrıca son tarihi geçmiş ve henüz tamamlanmamış görevleri **"Gecikmiş"** etiketiyle gösterdim.
+
+Uygulama içerisinden alınmış **3 adet ekran görüntüsü** de projeye eklenmiştir.
+
+## Çalıştırma
+
+Terminal üzerinden çalıştırmak için:
+
+```bash
+cd TodoYonetim.Api
+dotnet restore
+dotnet run
+```
+
+veya
+
+1. `TodoYonetimUygulamasi.sln` dosyasını **Visual Studio** ile açın.
+2. Başlangıç projesi olarak `TodoYonetim.Api` projesini seçin.
+3. Projeyi çalıştırın (`F5` veya `Ctrl + F5`).
+4. Tarayıcı otomatik açılmazsa `http://localhost:5050` adresine gidin.
+
+
+
+Veritabanı ilk çalıştırmada `todo.db` adıyla otomatik olarak oluşturulur.
+
+## Özellikler
+
+* Görev ekleme, listeleme, güncelleme, silme ve tamamlanma durumunu değiştirme
+* Tümü / Tamamlanan / Tamamlanmayan filtreleri
+* Başlık ve son tarih doğrulamaları
+* Son tarihi geçmiş ve tamamlanmamış görevler için **"Gecikmiş"** etiketi
+* Controller → Service → Repository → DbContext katmanlı mimarisi
+* Doğru HTTP durum kodlarının kullanımı (`200`, `201`, `204`, `400`, `404`)

@@ -1,0 +1,81 @@
+Hata Tespit ve Çözüm Özeti
+
+1. Sipariş oluşturma isteği yanlış adrese ve yanlış HTTP metoduyla gönderiliyordu
+
+Belirti: Tarayıcının Network sekmesinde sipariş oluşturma isteğinin /api/order adresine GET isteği olarak gönderildiği ve bu nedenle siparişin oluşturulamadığı görüldü.
+
+Kök neden: Backend tarafında sipariş oluşturma işlemi /api/orders endpointi üzerinden POST metodu ile çalışırken, frontend yanlışlıkla /api/order adresine GET isteği gönderiyordu. Ayrıca GET isteğinde gövde (body) kullanılmaya çalışılıyordu.
+
+Çözüm: İstek adresi /api/orders olarak güncellendi, HTTP metodu POST olarak değiştirildi ve sipariş bilgileri JSON formatında istek gövdesiyle gönderilecek şekilde düzenlendi.
+
+2. Frontend'den gönderilen alan adları backend modeliyle uyuşmuyordu
+
+Belirti: Doğru adrese istek gönderilmesine rağmen bazı alanlar boş geliyor veya doğrulama hataları oluşuyordu.
+
+Kök neden: Frontend tarafında customer_name, product_name, unit_price ve discount_rate alanları gönderilirken, backend modeli camelCase yapısındaki alan adlarını bekliyordu.
+
+Çözüm: Gönderilen veri modeli backend ile uyumlu olacak şekilde customerName, productName, quantity, unitPrice ve discountRate alanları kullanılarak güncellendi.
+
+3. Bildirim servisi için yanlış port kullanılıyordu
+
+Belirti: Sipariş başarıyla oluşturulmasına rağmen NotificationApi tarafında herhangi bir bildirim kaydı oluşmuyordu.
+
+Kök neden: NotificationApi 5049 portunda çalışırken, OrderApi yapılandırmasında bildirim servisi adresi yanlışlıkla 5050 portu olarak tanımlanmıştı.
+
+Çözüm: NotificationService:BaseUrl değeri http://localhost:5049 olarak güncellendi.
+
+4. İndirim hesaplaması hatalı yapılıyordu
+
+Belirti: İndirim uygulanan siparişlerde toplam tutar beklenenden farklı hesaplanıyordu.
+
+Kök neden: İndirim tutarı ara toplam üzerinden hesaplanmak yerine DiscountRate * 100 şeklinde sabit bir değer olarak uygulanıyordu.
+
+Çözüm: Toplam tutar, adet × birim fiyat × (1 - indirim oranı) formülüne göre hesaplanacak şekilde düzenlendi ve sonuç iki ondalık basamağa yuvarlandı.
+
+5. DbContext yanlış yaşam süresiyle kaydedilmişti
+
+Belirti: Aynı anda gelen isteklerde aynı DbContext örneğinin kullanılması nedeniyle izleme ve thread güvenliği sorunları yaşanma riski bulunuyordu.
+
+Kök neden: EF Core DbContext nesnesi thread-safe olmadığı halde Singleton olarak kaydedilmişti.
+
+Çözüm: AddDbContext varsayılan kullanım şekli olan Scoped yaşam süresiyle yapılandırıldı.
+
+6. Bildirim isteği beklenmeden çalıştırılıyordu
+
+Belirti: Sipariş oluşturulduktan sonra bildirim işlemi tamamlanmadan istek sonlanabiliyor ve oluşan hatalar tespit edilemiyordu.
+
+Kök neden: Bildirim servisine yapılan çağrı fire-and-forget yöntemiyle çalıştırılıyor, oluşan hatalar ise yakalanmadan geçiliyordu.
+
+Çözüm: Bildirim isteği await ile beklenir hale getirildi. Bildirim gönderimi başarısız olsa bile sipariş kaydı korunurken, oluşan hata ve başarısız HTTP yanıtları loglara kaydedildi.
+
+7. Sipariş numarası güvenilir şekilde üretilmiyordu
+
+Belirti: Uygulama yeniden başlatıldığında sipariş numarası sıfırlanıyor ve eş zamanlı işlemlerde aynı numaranın üretilme ihtimali ortaya çıkıyordu.
+
+Kök neden: Sipariş numarası bellek üzerinde tutulan statik bir sayaç kullanılarak oluşturuluyordu.
+
+Çözüm: Sipariş numarası zaman damgası ve GUID bilgisinin bir bölümünden oluşturulacak şekilde değiştirildi. Ayrıca veritabanında sipariş numarası alanı için benzersiz indeks tanımlandı.
+
+8. Girdi doğrulaması yetersizdi
+
+Belirti: Boş veya yalnızca boşluk karakterlerinden oluşan metinler, sıfır ya da negatif adet, negatif fiyat ve geçersiz indirim oranları sisteme gönderilebiliyordu. Ayrıca müşteri adı boş olduğunda Trim işlemi sırasında hata oluşabiliyordu.
+
+Kök neden: İstek modelinde gerekli doğrulama kuralları bulunmuyor ve metin alanları için boşluk kontrolü yapılmıyordu.
+
+Çözüm: Alanlara zorunluluk, uzunluk ve değer aralığı kontrolleri eklendi. Müşteri ve ürün adlarının yalnızca boşluk karakterlerinden oluşması da engellendi.
+
+9. Oluşturma yanıtındaki kaynak adresi yanlış endpointi gösteriyordu
+
+Belirti: 201 Created yanıtındaki Location başlığı, oluşturulan sipariş yerine sipariş listesini gösteriyordu.
+
+Kök neden: CreatedAtAction metodu tek bir siparişi döndüren endpoint yerine listeleme yapan GetAll metodunu hedefliyordu.
+
+Çözüm: GET /api/orders/{id} endpointi eklendi ve CreatedAtAction bu endpointi kullanacak şekilde güncellendi.
+
+10. Arayüzde hata yönetimi ve tablo oluşturma güvenli değildi
+
+Belirti: API'den dönen hata mesajları kullanıcıya gösterilmiyor ve kullanıcıdan alınan veriler doğrudan innerHTML ile sayfaya ekleniyordu.
+
+Kök neden: HTTP hata yanıtları okunmadan geçiliyor, tablo satırları ise HTML şablonları kullanılarak oluşturuluyordu.
+
+Çözüm: API'den dönen Problem Details yanıtları okunarak kullanıcıya anlamlı hata mesajları gösterildi. Ayrıca tablo oluşturulurken innerHTML yerine textContent kullanılarak kullanıcı verilerinin HTML olarak çalıştırılması engellendi.

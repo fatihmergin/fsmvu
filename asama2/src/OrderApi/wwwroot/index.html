@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipariş Yönetim Sistemi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Sipariş Yönetim Sistemi</h1>
+
+    <form id="orderForm">
+      <label for="customerName">
+        Müşteri Adı
+        <input type="text" id="customerName" maxlength="120" required>
+      </label>
+
+      <label for="productName">
+        Ürün Adı
+        <input type="text" id="productName" maxlength="160" required>
+      </label>
+
+      <label for="quantity">
+        Adet
+        <input type="number" id="quantity" min="1" value="1" required>
+      </label>
+
+      <label for="unitPrice">
+        Birim Fiyat (TL)
+        <input type="number" id="unitPrice" min="0" step="0.01" required>
+      </label>
+
+      <label for="discountRate">
+        İndirim Oranı (0-1)
+        <input type="number" id="discountRate" min="0" max="1" step="0.01" value="0" required>
+      </label>
+
+      <button type="submit">Sipariş Oluştur</button>
+    </form>
+
+    <p id="statusMessage" aria-live="polite"></p>
+
+    <h2>Siparişler</h2>
+    <div class="table-wrapper">
+      <table id="ordersTable">
+        <thead>
+          <tr>
+            <th>Sipariş No</th>
+            <th>Müşteri</th>
+            <th>Ürün</th>
+            <th>Adet</th>
+            <th>Birim Fiyat</th>
+            <th>İndirim</th>
+            <th>Toplam</th>
+            <th>Tarih</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

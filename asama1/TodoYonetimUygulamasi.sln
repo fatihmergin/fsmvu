@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoYonetim.Api", "TodoYonetim.Api\TodoYonetim.Api.csproj", "{2D55EDC9-C7B7-4B8B-BD49-7A3436F87912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoLog.Api", "TodoLog.Api\TodoLog.Api.csproj", "{6CF36C50-9938-41BA-8434-E5B64F8E4DC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoYonetim.Tests", "TodoYonetim.Tests\TodoYonetim.Tests.csproj", "{E5B7898A-8F6E-4374-B78A-F20EA6C09C73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D55EDC9-C7B7-4B8B-BD49-7A3436F87912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D55EDC9-C7B7-4B8B-BD49-7A3436F87912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D55EDC9-C7B7-4B8B-BD49-7A3436F87912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D55EDC9-C7B7-4B8B-BD49-7A3436F87912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF36C50-9938-41BA-8434-E5B64F8E4DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF36C50-9938-41BA-8434-E5B64F8E4DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF36C50-9938-41BA-8434-E5B64F8E4DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF36C50-9938-41BA-8434-E5B64F8E4DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B7898A-8F6E-4374-B78A-F20EA6C09C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B7898A-8F6E-4374-B78A-F20EA6C09C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B7898A-8F6E-4374-B78A-F20EA6C09C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B7898A-8F6E-4374-B78A-F20EA6C09C73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

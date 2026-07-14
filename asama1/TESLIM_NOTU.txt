@@ -1,0 +1,4 @@
+-Uygulamayı .NET 8 Web API, Entity Framework Core ve SQLite ile katmanlı bir yapıda geliştirdim; Controller, Service, Repository ve DbContext sorumluluklarını ayırdım. 
+Arayüzü ek kurulum gerektirmemesi için sade HTML, CSS ve JavaScript ile aynı API projesi içinde sundum. 
+-Zorunlu CRUD, doğrulama, filtreleme ve gecikmiş görev kurallarına ek olarak kategori, çoklu etiket, arama ve sıralama özelliklerini tamamladım. 
+-Bonus kapsamında görev oluşturma kayıtlarını tutan ayrı bir mini servis ve temel iş kurallarını doğrulayan birim testleri ekledim.

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Görev Yönetimi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">GÖREV YÖNETİMİ</p>
+                <h1>Yapılacak işleri tek yerde yönetin</h1>
+                <p class="subtitle">Görevleri ekleyin, filtreleyin, sıralayın ve tamamlanma durumlarını takip edin.</p>
+            </div>
+            <div class="summary" id="summary">0 görev</div>
+        </header>
+
+        <nav class="app-tabs" aria-label="Uygulama bölümleri">
+            <button class="app-tab active" type="button" data-tab="tasks" aria-selected="true">Görevler</button>
+            <button class="app-tab" type="button" data-tab="settings" aria-selected="false">Ayarlar</button>
+        </nav>
+
+        <div id="tasks-view" class="tab-view">
+            <section class="panel">
+                <h2 id="form-title">Yeni görev ekle</h2>
+                <form id="todo-form">
+                    <input type="hidden" id="todo-id">
+                    <div class="form-grid">
+                        <label class="field field-wide">
+                            <span>Başlık *</span>
+                            <input id="title" maxlength="120" required placeholder="Örn. Teknik dokümanı hazırla">
+                        </label>
+                        <label class="field field-wide">
+                            <span>Açıklama</span>
+                            <textarea id="description" maxlength="600" rows="3" placeholder="Görevin ayrıntıları"></textarea>
+                        </label>
+                        <label class="field">
+                            <span>Kategori</span>
+                            <select id="category">
+                                <option value="">Kategori yok</option>
+                            </select>
+                        </label>
+                        <label class="field">
+                            <span>Son tarih</span>
+                            <input id="due-date" type="date">
+                        </label>
+                        <label class="field">
+                            <span>Öncelik</span>
+                            <select id="priority">
+                                <option value="Dusuk">Düşük</option>
+                                <option value="Orta" selected>Orta</option>
+                                <option value="Yuksek">Yüksek</option>
+                            </select>
+                        </label>
+                        <fieldset class="field tag-field">
+                            <legend>Etiketler</legend>
+                            <div id="tag-options" class="tag-options"></div>
+                        </fieldset>
+                    </div>
+                    <div id="error-message" class="error-message" role="alert"></div>
+                    <div class="form-actions">
+                        <button class="button primary" type="submit" id="save-button">Görev ekle</button>
+                        <button class="button secondary hidden" type="button" id="cancel-button">İptal</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel tasks-panel">
+                <div class="tasks-title-row">
+                    <h2>Görevler</h2>
+                    <div class="filters" aria-label="Durum filtreleri">
+                        <button class="filter active" type="button" data-status="all">Tümü</button>
+                        <button class="filter" type="button" data-status="pending">Tamamlanmayan</button>
+                        <button class="filter" type="button" data-status="completed">Tamamlanan</button>
+                    </div>
+                </div>
+
+                <div class="toolbar">
+                    <label class="toolbar-field search-field">
+                        <span>Arama</span>
+                        <input id="search" type="search" placeholder="Başlık, açıklama, kategori veya etiket ara">
+                    </label>
+                    <label class="toolbar-field">
+                        <span>Kategori</span>
+                        <select id="category-filter">
+                            <option value="">Tümü</option>
+                        </select>
+                    </label>
+                    <label class="toolbar-field">
+                        <span>Etiket</span>
+                        <select id="tag-filter">
+                            <option value="">Tümü</option>
+                        </select>
+                    </label>
+                    <label class="toolbar-field">
+                        <span>Sıralama</span>
+                        <select id="sort">
+                            <option value="created|desc">En yeni eklenen</option>
+                            <option value="created|asc">En eski eklenen</option>
+                            <option value="dueDate|asc">Son tarih: Yakın</option>
+                            <option value="dueDate|desc">Son tarih: Uzak</option>
+                            <option value="priority|desc">Öncelik: Yüksek</option>
+                            <option value="priority|asc">Öncelik: Düşük</option>
+                            <option value="title|asc">Başlık: A-Z</option>
+                            <option value="title|desc">Başlık: Z-A</option>
+                            <option value="category|asc">Kategori: A-Z</option>
+                            <option value="status|asc">Durum: Bekleyen önce</option>
+                            <option value="status|desc">Durum: Tamamlanan önce</option>
+                        </select>
+                    </label>
+                    <button class="button secondary clear-button" type="button" id="clear-filters">Temizle</button>
+                </div>
+
+                <div id="loading" class="state">Yükleniyor...</div>
+                <div id="empty-state" class="state hidden">Bu ölçütlere uygun görev bulunmuyor.</div>
+                <div id="todo-list" class="todo-list"></div>
+            </section>
+        </div>
+
+        <div id="settings-view" class="tab-view hidden">
+            <section class="panel settings-panel">
+                <div class="section-heading settings-heading">
+                    <div>
+                        <p class="eyebrow">AYARLAR</p>
+                        <h2>Kategori ve etiket yönetimi</h2>
+                        <p>Görev oluştururken kullanacağınız kategori ve etiketleri bu bölümden yönetin.</p>
+                    </div>
+                </div>
+                <div class="management-grid">
+                    <div class="management-box">
+                        <div class="management-title">
+                            <h3>Kategoriler</h3>
+                            <span id="category-count" class="count-badge">0</span>
+                        </div>
+                        <form id="category-form" class="inline-form">
+                            <label class="field grow">
+                                <span>Yeni kategori</span>
+                                <input id="category-name" maxlength="80" required placeholder="Örn. Yazılım">
+                            </label>
+                            <button class="button secondary" type="submit">Ekle</button>
+                        </form>
+                        <div id="category-list" class="chip-list"></div>
+                        <div id="category-error" class="small-error"></div>
+                    </div>
+                    <div class="management-box">
+                        <div class="management-title">
+                            <h3>Etiketler</h3>
+                            <span id="tag-count" class="count-badge">0</span>
+                        </div>
+                        <form id="tag-form" class="inline-form">
+                            <label class="field grow">
+                                <span>Yeni etiket</span>
+                                <input id="tag-name" maxlength="50" required placeholder="Örn. Acil">
+                            </label>
+                            <button class="button secondary" type="submit">Ekle</button>
+                        </form>
+                        <div id="tag-list" class="chip-list"></div>
+                        <div id="tag-error" class="small-error"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

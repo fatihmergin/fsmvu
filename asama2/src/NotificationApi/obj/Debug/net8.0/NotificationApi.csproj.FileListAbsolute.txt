@@ -1,0 +1,52 @@
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\bin\Debug\net8.0\NotificationApi.staticwebassets.endpoints.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\bin\Debug\net8.0\NotificationApi.exe
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\bin\Debug\net8.0\NotificationApi.deps.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\bin\Debug\net8.0\NotificationApi.runtimeconfig.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\bin\Debug\net8.0\NotificationApi.dll
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\bin\Debug\net8.0\NotificationApi.pdb
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\scopedcss\bundle\NotificationApi.styles.css
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.dll
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\refint\NotificationApi.dll
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.pdb
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\NotificationApi.genruntimeconfig.cache
+C:\Users\ADMIN\Desktop\SiparisYonetimSinaviFatihMehmetErgin\SiparisYonetimSinaviFatihMehmetErgin\src\NotificationApi\obj\Debug\net8.0\ref\NotificationApi.dll
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\bin\Debug\net8.0\NotificationApi.staticwebassets.endpoints.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\bin\Debug\net8.0\NotificationApi.exe
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\bin\Debug\net8.0\NotificationApi.deps.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\bin\Debug\net8.0\NotificationApi.runtimeconfig.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\bin\Debug\net8.0\NotificationApi.dll
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\bin\Debug\net8.0\NotificationApi.pdb
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\scopedcss\bundle\NotificationApi.styles.css
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.dll
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\refint\NotificationApi.dll
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.pdb
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\NotificationApi.genruntimeconfig.cache
+C:\Users\ADMIN\Desktop\Yeni klasör\asama2\src\NotificationApi\obj\Debug\net8.0\ref\NotificationApi.dll
