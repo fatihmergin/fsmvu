@@ -70,3 +70,14 @@ dotnet test TodoYonetimUygulamasi.sln
 - Kategori ve etiketlerin ayrı Ayarlar sekmesinden yönetimi
 
 Veritabanları ilk çalıştırmada otomatik oluşturulur. Ana API log servisine erişemezse görev işlemi yine tamamlanır; görev verileri `todo-management.db`, yeni görev kayıtları `todo-logs.db` içinde tutulur.
+
+## Ekran Görüntüleri
+
+### Ana Sayfa
+![Ana Sayfa](ekranResmi1.png)
+
+### Görev Yönetimi
+![Görev Yönetimi](ekranResmi2.png)
+
+### Ayarlar
+![Ayarlar](ekranResmi3.png)
